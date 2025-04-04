@@ -2,6 +2,14 @@
 なリポジトリです。
 
 # EM-Solenoid アニメーション
+https://bamboonerd.github.io/Showcase/em-solenoid-standalone/
+背景画像天球版
+https://bamboonerd.github.io/Showcase/em-solenoid-flat-back/
+背景画像フラット版
+
+## 操作
+流れている画像パーティクルをクリックすると背景がその画像に変わります。
+左ドラッグ/右ドラッグ/ホイールでカメラを動かせます。
 
 ## クレジット
 

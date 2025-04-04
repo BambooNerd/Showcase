@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EM Solenoid Animation</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; }
+        canvas { display: block; }
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+            padding: 5px 0;
+            font-family: sans-serif;
+            font-size: 14px;
+            pointer-events: none; /* Prevent info text from blocking interactions */
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        Click on a particle to change the background.<br /> Use mouse/touch to orbit, zoom, and pan.
+    </div>
+    <div id="canvas-container"></div>
+
+    <!-- Three.js と関連ライブラリをCDNから読み込む -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/",
+            "three/addons/controls/OrbitControls.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/controls/OrbitControls.js",
+            "three/addons/postprocessing/EffectComposer.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/postprocessing/EffectComposer.js",
+            "three/addons/postprocessing/RenderPass.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/postprocessing/RenderPass.js",
+            "three/addons/postprocessing/UnrealBloomPass.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/postprocessing/UnrealBloomPass.js",
+            "three/addons/shaders/LuminosityHighPassShader.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/shaders/LuminosityHighPassShader.js",
+            "three/addons/shaders/CopyShader.js": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/shaders/CopyShader.js"
+        }
+    }
+    </script>
+
+    <!-- アニメーションのスクリプト -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

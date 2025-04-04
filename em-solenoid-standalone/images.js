@@ -202,3 +202,30 @@ export const allImages = [
     'images/image_1743666203981.png',
     // 必要に応じて画像パスを追加
 ];
+
+/**
+ * 画像の完全なURLパスを生成して返す関数
+ * @param {string} prefix - ドメインやベースパスの接頭辞（例: 'https://example.com/'または'/em-solenoid-standalone/'）
+ * @returns {string[]} - 完全なパスのリスト
+ */
+export function getFullImagePaths(prefix = '/em-solenoid-standalone/') {
+    // プレフィックスの最後がスラッシュで終わるようにする
+    if (prefix && !prefix.endsWith('/')) {
+        prefix += '/';
+    }
+    
+    // 各画像パスに接頭辞を追加して完全なURLを生成
+    return allImages.map(imagePath => {
+        // 'images/'で始まる相対パスの場合、その部分を外してプレフィックスと結合
+        if (imagePath.startsWith('images/')) {
+            return prefix + imagePath;
+        }
+        // 既に絶対パスの場合はそのまま返す
+        return imagePath;
+    });
+}
+
+/**
+ * 簡易バージョン：固定のプレフィックスを使った完全なURLパスのリスト
+ */
+export const allImagesFullPath = getFullImagePaths('/em-solenoid-standalone/');
