@@ -228,4 +228,4 @@ export function getFullImagePaths(prefix = '/em-solenoid-standalone/') {
 /**
  * 簡易バージョン：固定のプレフィックスを使った完全なURLパスのリスト
  */
-export const allImagesFullPath = getFullImagePaths('/em-solenoid-standalone/');
+export const allImagesFullPath = getFullImagePaths('/Showcase/em-solenoid-standalone/');
